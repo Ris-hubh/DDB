@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://oonmagva8hms"]
+
+[ext_resource type="Script" uid="uid://puhy50dfo2fv" path="res://Scene/main.gd" id="1_f6udf"]
+[ext_resource type="Script" uid="uid://dbqjvxsto60si" path="res://Scripts/spawner.gd" id="2_sblpm"]
+[ext_resource type="PackedScene" uid="uid://dltrcr3a0gagm" path="res://Scene/obstacle.tscn" id="3_2wwxx"]
+[ext_resource type="PackedScene" uid="uid://dnbbwtmccqnq8" path="res://Scene/duck.tscn" id="4_3amdw"]
+
+[node name="Main" type="Node2D" unique_id=2095041791]
+script = ExtResource("1_f6udf")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=675543925]
+script = ExtResource("2_sblpm")
+obstacle_scene = ExtResource("3_2wwxx")
+duck_scene = ExtResource("4_3amdw")

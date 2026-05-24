@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dnbbwtmccqnq8"]
+
+[ext_resource type="Script" uid="uid://molmcgxyf6f" path="res://Scripts/duck.gd" id="1_k0rew"]
+
+[node name="Duck" type="Node2D" unique_id=1184797896]
+script = ExtResource("1_k0rew")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1690824791]
+offset_left = -90.0
+offset_top = -66.0
+offset_right = 91.0
+offset_bottom = 72.0
+color = Color(0.69570106, 0.67469186, 0.07265299, 1)
