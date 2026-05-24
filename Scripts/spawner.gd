@@ -75,7 +75,11 @@ func spawn_group(scene: PackedScene, count: int):
 			var obj = scene.instantiate()
 			add_child(obj)
 
-			obj.position = Grid.tile_to_world(row, col) - Grid.get_scroll_offset_world()
+			obj.position = (
+	Grid.tile_to_world(row, col)
+	+ Vector2(Grid.tile_size / 2, Grid.tile_size / 2)
+	- Grid.get_scroll_offset_world()
+)
 
 			Grid.claim(row, col, obj)
 

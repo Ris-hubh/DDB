@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dbqjvxsto60si" path="res://Scripts/spawner.gd" id="2_sblpm"]
 [ext_resource type="PackedScene" uid="uid://dltrcr3a0gagm" path="res://Scene/obstacle.tscn" id="3_2wwxx"]
 [ext_resource type="PackedScene" uid="uid://dnbbwtmccqnq8" path="res://Scene/duck.tscn" id="4_3amdw"]
+[ext_resource type="Script" uid="uid://804le3g1li0w" path="res://Scripts/grid_debug.gd" id="5_3amdw"]
 
 [node name="Main" type="Node2D" unique_id=2095041791]
 script = ExtResource("1_f6udf")
@@ -12,3 +13,8 @@ script = ExtResource("1_f6udf")
 script = ExtResource("2_sblpm")
 obstacle_scene = ExtResource("3_2wwxx")
 duck_scene = ExtResource("4_3amdw")
+
+[node name="GridDebug" type="Node2D" parent="." unique_id=644022303]
+script = ExtResource("5_3amdw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2092123344]

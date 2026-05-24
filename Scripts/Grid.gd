@@ -3,7 +3,7 @@ extends Node
 # Grid setup (size and tile spacing)
 @export var rows: int = 7
 @export var cols: int = 4
-@export var tile_size: int = 64
+@export var tile_size: int = 160
 
 # Stores what is placed on the grid and which tiles are safe
 var grid := {}
@@ -73,12 +73,15 @@ func get_scroll_offset_world() -> Vector2:
 
 # Converts grid position (row, col) into world position
 func tile_to_world(row: int, col: int) -> Vector2:
-	var offset_x = (cols * tile_size) * 0.5
-	var offset_y = (rows * tile_size) * 0.5
+	var total_width = cols * tile_size
+	var total_height = rows * tile_size
+
+	var start_x = -total_width / 2
+	var start_y = -total_height / 2
 
 	return Vector2(
-		col * tile_size - offset_x,
-		row * tile_size - offset_y
+		start_x + col * tile_size,
+		start_y + row * tile_size
 	)
 
 
